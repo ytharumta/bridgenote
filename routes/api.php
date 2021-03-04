@@ -24,6 +24,6 @@ Route::group(['prefix' => 'auth', 'middleware' => 'auth:sanctum'], function() {
     Route::get('all', [App\Http\Controllers\AuthController::class, 'all']);
     Route::post('logout', [App\Http\Controllers\AuthController::class, 'logout']);
     Route::post('edit/{id}', [App\Http\Controllers\AuthController::class, 'edit']);
-    Route::post('delete/{id}', [App\Http\Controllers\AuthController::class, 'delete']);
+    Route::get('delete/{id}', [App\Http\Controllers\AuthController::class, 'delete']);
     Route::get('show/{id}', [App\Http\Controllers\AuthController::class, 'show']);
 });
